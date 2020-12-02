@@ -1,5 +1,5 @@
 <ul class="list-unstyled">
-  <% @tasks.each do |task| %>
+  <% @task.each do |task| %>
     <li class="media mb-3">
       <img class="mr-2 rounded" src="<%= gravatar_url(tasklist.user, { size: 50 }) %>" alt="">
       <div class="media-body">
@@ -17,5 +17,5 @@
       </div>
     </li>
   <% end %>
-  <%= paginate @tasks %>
+  <%= paginate @task %>
 </ul>
