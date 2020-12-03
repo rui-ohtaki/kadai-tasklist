@@ -17,10 +17,8 @@ ActiveRecord::Schema.define(version: 2020_12_02_135128) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.text "status"
-    t.bigint "{:foreign_key=>true}_id"
     t.bigint "user_id"
     t.index ["user_id"], name: "index_tasks_on_user_id"
-    t.index ["{:foreign_key=>true}_id"], name: "index_tasks_on_{:foreign_key=>true}_id"
   end
 
   create_table "users", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
