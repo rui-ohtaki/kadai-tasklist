@@ -8,7 +8,7 @@ class TasksController < ApplicationController
       flash[:success] = 'タスクが正常に登録されました'
       redirect_to root_url
     else
-      @tasks = current_user.tasks.order(id: :desc).page(params[:page])
+
       flash.now[:danger] = 'タスクが登録されませんでした'
       render :new
     end
@@ -19,7 +19,7 @@ class TasksController < ApplicationController
   end
   
   def show
-      @task = Task.find(params[:id])
+
   end
   
   def new
@@ -28,11 +28,11 @@ class TasksController < ApplicationController
   
 
   def edit
-     @task = Task.find(params[:id])
+
   end
   
   def update
-     @task = Task.find(params[:id])
+
     if @task.update(task_params)
       flash[:success] = 'タスクは正常に更新されました'
       redirect_to @task
